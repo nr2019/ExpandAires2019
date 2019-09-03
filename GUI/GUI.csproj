@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EFB40298-58A7-4DC4-8DAC-8B3C5FCA5993}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=11.2.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=11.2.0.1, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BD\FrmCrearBKP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BD\FrmCrearBKP.Designer.cs">
+      <DependentUpon>FrmCrearBKP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BD\FrmRestoreBKP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BD\FrmRestoreBKP.Designer.cs">
+      <DependentUpon>FrmRestoreBKP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogon.Designer.cs">
+      <DependentUpon>frmLogon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Idioma\FrmActualizarTextos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Idioma\FrmActualizarTextos.Designer.cs">
+      <DependentUpon>FrmActualizarTextos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Idioma\FrmBorrarIdioma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Idioma\FrmBorrarIdioma.Designer.cs">
+      <DependentUpon>FrmBorrarIdioma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Idioma\FrmCambioIdioma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Idioma\FrmCambioIdioma.Designer.cs">
+      <DependentUpon>FrmCambioIdioma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Idioma\FrmCrearIdioma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Idioma\FrmCrearIdioma.Designer.cs">
+      <DependentUpon>FrmCrearIdioma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Idioma\FrmCrearTextos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Idioma\FrmCrearTextos.Designer.cs">
+      <DependentUpon>FrmCrearTextos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Idioma\FrmModificarIdioma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Idioma\FrmModificarIdioma.Designer.cs">
+      <DependentUpon>FrmModificarIdioma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BD\FrmCrearBKP.resx">
+      <DependentUpon>FrmCrearBKP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BD\FrmRestoreBKP.resx">
+      <DependentUpon>FrmRestoreBKP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogon.resx">
+      <DependentUpon>frmLogon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Idioma\FrmActualizarTextos.resx">
+      <DependentUpon>FrmActualizarTextos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Idioma\FrmBorrarIdioma.resx">
+      <DependentUpon>FrmBorrarIdioma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Idioma\FrmCambioIdioma.resx">
+      <DependentUpon>FrmCambioIdioma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Idioma\FrmCrearIdioma.resx">
+      <DependentUpon>FrmCrearIdioma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Idioma\FrmCrearTextos.resx">
+      <DependentUpon>FrmCrearTextos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Idioma\FrmModificarIdioma.resx">
+      <DependentUpon>FrmModificarIdioma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BE\BE.csproj">
+      <Project>{f490a272-d681-436d-838d-98ba4f52139c}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{d55c3992-dd6e-4af7-959e-c634f27c30c1}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
